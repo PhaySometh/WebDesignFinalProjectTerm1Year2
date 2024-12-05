@@ -13,7 +13,8 @@ body {
     background-position: center;  /* Centers the background image */
     background-repeat: no-repeat;
     background-attachment: fixed;  /* Ensures the background image stays fixed while scrolling */
-    height: 90vh;
+    height: 100vh;
+    overflow-y: hidden;  /* disable scrolling on the body */
 }
 @media (max-width: 768px) {
     body {
@@ -145,6 +146,23 @@ body {
         font-size: 4rem;
     }
 }
+@media (max-width: 568px) {
+    .christmas {
+        font-size: 7rem;
+    }
+    .p_text {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 475px) {
+    .christmas {
+        font-size: 5rem;
+    }
+    .p_text {
+        font-size: 2rem;
+    }
+}
+
 .btn {
     width: 300px;
     text-align: center;
