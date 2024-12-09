@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mountains+of+Christmas:wght@400;700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap');
+/* Google Fonts already imported */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+        font-family: "Poppins", serif;
+        background-image: url(../assets/img4_70.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .bgBox {
+        width: 370px;
+        height: 510px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        margin-bottom: 10px;
+        filter: blur(5px); /* Adds a blurred background effect */
+    }
+    
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 400px;
+        height: 500px;
+        gap: 10px;
+        z-index: 10;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+        /* border-radius: 10px; */
+    }
+    
+    .header {
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #333;
+    }
+    
+    .login {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 100px;
+    }
+    
+    .red_element {
+        align-self: center;
+        width: 10px;
+        height: 70px;
+        background-color: red;
+        position: absolute;
+        left: -50px;
+    }
+    
+    .signup {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        font-weight: 700;
+    }
+    
+    .circle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: red;
+        clip-path: circle();
+        color: white;
+        position: absolute;
+        right: -100px;
+        top: -100px;
+        animation: bounce 2s infinite; /* Adds a subtle bounce animation */
+        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5); /* Glow effect */
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .circle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 30px rgba(255, 0, 0, 0.7);
+    }
+    
+    .circle i {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    
+    .t_signup {
+        position: absolute;
+        bottom: 4px;
+        font-size: 10px;
+    }
+    
+    .username, .password {
+        margin-bottom: 30px;
+    }
+    
+    .username input, .password input {
+        border-style: none;
+        outline: none;
+        width: 300px;
+        padding: 5px 10px;
+        font-size: 16px;
+        /* border-radius: 5px; */
+        /* box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); Subtle inset shadow */
+    }
+    
+    .formContainer {
+        width: 300px;
+    }
+    
+    .submitBtn {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .submitBtn input {
+        background-color: rgba(255, 0, 0, 0.7);
+        padding: 10px;
+        border: 1px solid black;
+        color: white;
+        font-size: 20px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4),
+        0 4px 6px rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease-in-out;
+        /* border-radius: 5px; */
+    }
+    
+    .submitBtn input:hover {
+        background-color: rgba(255, 0, 0);
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+        0 8px 15px rgba(255, 255, 255, 0.4);
+        transform: scale(1.1);
+    }
+    
+    .submitBtn p {
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .submitBtn p:hover {
+        color: blue;
+        font-size: 15px;
+        transform: scale(1.1);
+    }
+    
+    /* Animation Keyframes */
+    @keyframes bounce {
+        0%, 100% {
+        transform: translateY(0);
+        }
+        50% {
+        transform: translateY(-10px);
+        }
+    }
+    
