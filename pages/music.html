@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/christmas-tree-white.png" />
+    <title>Music</title>
+    <link rel="stylesheet" href="../styles/music.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="idk">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../assets/christmas-tree-white.png" alt="" />
+                <h1>Jingle505</h1>
+                </div>
+                <div class="nav_element">
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-links">
+                    <li><a target="_blank" class="link" href="../index.html">Home</a></li>
+                    <li><a target="_blank" class="link" href="">Artical</a></li>
+                    <li><a id="active" target="_blank" class="link" href="../pages/music.html">Music</a></li>
+                    <li><a target="_blank" class="link" href="">Movie</a></li>
+                    <li><a target="_blank" class="link" href="">Gift-idea</a></li>
+                    <li><a target="_blank" class="link" href="">Festi-treat</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hero">
+            <h1>The</h1>
+            <h1>Real</h1>
+            <h1>Sound</h1>
+        </div>
+        <img class="headphone" src="../assets/headphone.png" alt="">
+        <div class="playbtn">
+            <p>Listen to the master piece</p>
+            <button id="playbtn" onclick="togglePlay()">
+                <i class="fa-solid fa-circle-play"></i>
+            </button>
+        </div>
+    </div>
+    <div class="music_section">
+        <p class="playlist">Playlist</p>
+        <div class="music_card">
+            <div class="music_card_bg"></div>
+            <i class="fa-solid fa-less-than"></i>
+            <img src="../assets/Santa_Tell_Me_Single.jpg" alt="">
+            <i class="fa-solid fa-greater-than"></i>
+        </div>
+        <p class="title">Santa Tell Me</p>
+        <div class="description">
+            <i class="fa-solid fa-music"></i>
+            <p>Arina Grande</p>
+        </div>
+        <div class="more">
+            <a target="_blank" href="https://open.spotify.com/playlist/37i9dQZF1DX0Yxoavh5qJV?si=LQNB20a5QYWZgOm31657Ng">
+                <h1>Listen More <i class="fa-brands fa-spotify"></i></h1>
+            </a>
+        </div>
+    </div>
+<script>
+    const audio = new Audio("../assets/JingleBells.mp3")
+    const playBtn = document.getElementById("playbtn");
+    audio.loop = true;
+
+    function togglePlay() {
+        if (audio.paused) {
+            audio.play();
+            playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>'
+        } else {
+            audio.pause();
+            playBtn.innerHTML = '<i class="fa-solid fa-circle-play"></i>'
+        }
+    }
+    audio.addEventListener('ended', function(){
+        if(!audio.paused) {
+            audio.currentTime = 0;
+            audio.play();
+        }
+    })
+</script>        
+</body>
+
+</html>
