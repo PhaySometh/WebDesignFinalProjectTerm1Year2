@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="../assets/christmas-tree-white.png" />
+        <title>Sign In</title>
+        <link rel="stylesheet" href="../styles/signup.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="bgBox1"></div>
+        <div class="bgBox2"></div>
+        <div class="box">
+            <div class="formContainer">
+            <div class="login">
+                <div class="white_element"></div>
+                <h1 class="header">Sign Up</h1>
+            </div>
+            <div class="username">
+                <label for="username">Username</label><br>
+                <input type="text">
+                <hr>
+            </div>
+            <div class="password">
+                <label for="password">Password</label><br>
+                <div class="password-container">
+                    <input type="password" id="password">
+                    <i class="fas fa-eye toggle-password" onclick="togglePassword('password', this)"></i>
+                </div>
+                <hr>
+            </div>
+            <div class="repeatpassword">
+                <label for="repeatpassword">Repeat Password</label><br>
+                <div class="password-container">
+                    <input type="password" id="repeatpassword">
+                    <i class="fas fa-eye toggle-password" onclick="togglePassword('repeatpassword', this)"></i>
+                </div>
+                <hr>
+            </div>
+            
+            <div class="submitBtn">
+                <a href="signin.html">
+                <input type="submit" value="Next">
+                </a>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</html>

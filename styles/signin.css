@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mountains+of+Christmas:wght@400;700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap');
-/* Google Fonts already imported */
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +40,7 @@
         gap: 10px;
         z-index: 10;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Elevated shadow */
-        /* border-radius: 10px; */
+        border-radius: 10px; /* Smooth corners */
     }
     
     .header {
@@ -117,8 +116,8 @@
         width: 300px;
         padding: 5px 10px;
         font-size: 16px;
-        /* border-radius: 5px; */
-        /* box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); Subtle inset shadow */
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle inset shadow */
     }
     
     .formContainer {
@@ -132,16 +131,17 @@
         text-align: center;
     }
     
-    .submitBtn input {
+    .submitBtn a input {
         background-color: rgba(255, 0, 0, 0.7);
         padding: 10px;
-        border: 1px solid black;
+        border-style: none;
         color: white;
         font-size: 20px;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4),
         0 4px 6px rgba(255, 255, 255, 0.3);
         transition: all 0.3s ease-in-out;
-        /* border-radius: 5px; */
+        border-radius: 5px;
+        width: 300px;
     }
     
     .submitBtn input:hover {
@@ -174,4 +174,27 @@
         transform: translateY(-10px);
         }
     }
+    .password-container {
+        position: relative;
+        width: 300px;
+        display: flex;
+        align-items: center;
+    }
     
+    .password-container input {
+        width: 100%;
+        padding-right: 40px; /* Add space for the eye icon */
+    }
+    
+    .toggle-password {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #000000;
+        transition: color 0.3s;
+    }
+    
+    .toggle-password:hover {
+        color: rgb(255, 0, 0); /* Optional hover effect */
+    }
