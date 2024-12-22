@@ -265,20 +265,23 @@ body {
     border-radius: 10px;
     transition: 0.3s ease-in-out ;
   }
-  .music_card img:hover, .music_card_bg:hover  {
-    transform: scale(0.8);
+  .music_card img:hover  {
+    transform: scale(0.5);
+  }
+  .music_card_bg {
+    display: none;
   }
   .music_card {
     display: flex;
     justify-content: space-around;
     width: 100vw;
-  align-items: center;
-  text-align: center;
-  i {
-    color: white;
-    font-size: 5rem;
-    transition: color 0.3s ease-in-out;
-  }
+    align-items: center;
+    text-align: center;
+    i {
+      color: white;
+      font-size: 2rem;
+      transition: color 0.3s ease-in-out;
+    }
   
 }
 .music_card i {
