@@ -14,19 +14,19 @@
             <div class="logo">
                 <img src="../assets/christmas-tree-white.png" alt="" />
                 <h1>Jingle505</h1>
-                </div>
-                <div class="nav_element">
+            </div>
+            <div class="nav_element">
                 <input type="checkbox" id="menu-toggle" />
                 <label for="menu-toggle" class="menu-icon">
                     <i class="fas fa-bars"></i>
                 </label>
                 <ul class="nav-links">
-                    <li><a target="_blank" class="link" href="../index.html">Home</a></li>
-                    <li><a target="_blank" class="link" href="">Artical</a></li>
-                    <li><a id="active" target="_blank" class="link" href="../pages/music.html">Music</a></li>
-                    <li><a target="_blank" class="link" href="">Movie</a></li>
-                    <li><a target="_blank" class="link" href="">Gift-idea</a></li>
-                    <li><a target="_blank" class="link" href="">Festi-treat</a></li>
+                    <li><a class="link" href="../index.html">Home</a></li>
+                    <li><a class="link" href="">Artical</a></li>
+                    <li><a id="active" class="link" href="../pages/music.html">Music</a></li>
+                    <li><a class="link" href="">Movie</a></li>
+                    <li><a class="link" href="">Gift-idea</a></li>
+                    <li><a class="link" href="">Festi-treat</a></li>
                 </ul>
             </div>
         </div>
@@ -49,42 +49,138 @@
         <p class="playlist">Playlist</p>
         <div class="music_card">
             <div class="music_card_bg"></div>
-            <i class="fa-solid fa-less-than"></i>
+            <i class="fa-solid fa-less-than" onclick="prevSong()"></i>
             <img src="../assets/Santa_Tell_Me_Single.jpg" alt="">
-            <i class="fa-solid fa-greater-than"></i>
+            <i class="fa-solid fa-greater-than" onclick="nextSong()"></i>
         </div>
         <p class="title">Santa Tell Me</p>
         <div class="description">
             <i class="fa-solid fa-music"></i>
-            <p>Arina Grande</p>
+            <p>Ariana Grande</p>
         </div>
+        <button class="song-play-btn" onclick="playCurrentSong()">
+            <i class="fa-solid fa-circle-play"></i> Play Song
+        </button>        
         <div class="more">
             <a target="_blank" href="https://open.spotify.com/playlist/37i9dQZF1DX0Yxoavh5qJV?si=LQNB20a5QYWZgOm31657Ng">
                 <h1>Listen More <i class="fa-brands fa-spotify"></i></h1>
             </a>
         </div>
     </div>
-<script>
-    const audio = new Audio("../assets/JingleBells.mp3")
-    const playBtn = document.getElementById("playbtn");
-    audio.loop = true;
+    <script>
+        const themeAudio = new Audio("../assets/JingleBells.mp3"); // Theme song
+        let songAudio = new Audio(); // Audio element for songs
+        const playBtn = document.getElementById("playbtn");
+        const songs = [
+            {
+                title: "Santa Tell Me",
+                artist: "Ariana Grande",
+                image: "../assets/Santa_Tell_Me_Single.jpg",
+                audio: "../assets/SantaTellMeAudio.mp3"
+            },
+            {
+                title: "Last Christmas",
+                artist: "Wham!",
+                image: "../assets/lastchristmas.jpg",
+                audio: "../assets/LastChristmasAudio.mp3"
+            },
+            {
+                title: "All I Want for Christmas Is You",
+                artist: "Mariah Carey",
+                image: "../assets/All_I_Want_for_Christmas_Is_You.jpg",
+                audio: "../assets/AllIWantforChristmasIsYouAudio.mp3"
+            },
+            {
+                title: "SnowMan",
+                artist: "Sia",
+                image: "../assets/snowman.jpg",
+                audio: "../assets/SnowmanAudio.mp3"
+            }
+        ];
 
-    function togglePlay() {
-        if (audio.paused) {
-            audio.play();
-            playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>'
-        } else {
-            audio.pause();
-            playBtn.innerHTML = '<i class="fa-solid fa-circle-play"></i>'
+        let currentSongIndex = 0;
+        let isPlaying = false; // Track the play/pause state
+
+        // Initialize the theme song (looping)
+        themeAudio.loop = true;
+        themeAudio.play();
+
+        // Start playing theme song by default
+        playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>'; // Set the icon to pause
+
+        // Function to toggle the theme song (Play/Pause)
+        function togglePlay() {
+            if (themeAudio.paused && !isPlaying) {
+                themeAudio.play();
+                playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
+            } else {
+                themeAudio.pause();
+                playBtn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
+            }
         }
-    }
-    audio.addEventListener('ended', function(){
-        if(!audio.paused) {
-            audio.currentTime = 0;
-            audio.play();
+
+        // Play the current song
+        function playCurrentSong() {
+            if (!isPlaying) {
+                // Stop the theme song if it's playing
+                themeAudio.pause();
+
+                const song = songs[currentSongIndex];
+                songAudio.src = song.audio; // Update the audio source for the current song
+                songAudio.play();
+                songAudio.loop = true; // Loop the song
+                isPlaying = true;
+                updatePlayButton(); // Update the button state to pause
+            } else {
+                stopCurrentSong(); // Stop the current song if it's already playing
+            }
         }
-    })
-</script>        
+
+        // Stop the current song
+        function stopCurrentSong() {
+            songAudio.pause();
+            songAudio.currentTime = 0; // Reset the song to the beginning
+            isPlaying = false;
+            updatePlayButton(); // Update button to play
+        }
+
+        // Function to update the play button
+        function updatePlayButton() {
+            const playButton = document.querySelector(".song-play-btn i");
+            if (isPlaying) {
+                playButton.classList.remove("fa-circle-play");
+                playButton.classList.add("fa-circle-pause");
+            } else {
+                playButton.classList.remove("fa-circle-pause");
+                playButton.classList.add("fa-circle-play");
+            }
+        }
+
+        // Update the song details (image, title, artist)
+        function updateSong() {
+            const song = songs[currentSongIndex];
+            document.querySelector('.music_card img').src = song.image;
+            document.querySelector('.title').textContent = song.title;
+            document.querySelector('.description p').textContent = song.artist;
+            songAudio.src = song.audio; // Update the audio source for the current song
+            songAudio.load(); // Ensure the audio is loaded
+            isPlaying = false; // Reset the play state
+            updatePlayButton(); // Update the button state
+        }
+
+        // Next song
+        function nextSong() {
+            stopCurrentSong(); // Stop the current song before moving to the next
+            currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop back to the first song
+            updateSong();
+        }
+
+        // Previous song
+        function prevSong() {
+            stopCurrentSong(); // Stop the current song before moving to the previous
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length; // Loop back to the last song
+            updateSong();
+        }
+    </script>  
 </body>
-
 </html>
