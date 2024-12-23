@@ -109,11 +109,11 @@ body {
       font-size: 11px;
     }
   }
-
-/* Checkbox to toggle menu */
-#menu-toggle {
-    display: none; /* Hide checkbox visually */
-}
+  
+  /* Checkbox to toggle menu */
+  #menu-toggle {
+      display: none; /* Hide checkbox visually */
+    }
 
 #menu-toggle:checked ~ .nav-links {
     display: flex; /* Show menu when checkbox is checked */
@@ -125,6 +125,18 @@ body {
     color: white;
     margin: 80px 0 0 40px;
     z-index: 1; /* Lower z-index to stay behind navbar */
+}
+@media (max-width: 321px) {
+    .hero_section  {
+        margin: 40px 0 0 20px;
+        h1 {
+            font-size: 4rem;
+            line-height: 6rem;
+        }
+    }
+    .btn button {
+        width: 200px;
+    }
 }
 .christmas {
     position: relative;

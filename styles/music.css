@@ -98,10 +98,16 @@ body {
   #active {
     color: rgb(255, 0, 0);
   }
+  .music_card i {
+    font-size: 4rem;
+  }
 }
 @media (max-width: 871px) {
   .navbar .nav-links li a {
     font-size: 11px;
+  }
+  .music_card i {
+    font-size: 4rem;
   }
 }
 
@@ -192,11 +198,17 @@ body {
   .music_card img, .music_card_bg{
     transform: scale(0.7);
   }
+  .music_card i {
+    font-size: 3rem;
+  }
+  .music_section .music_card img:hover {
+    transform: scale(0.9);
+  }
 }
 .music_card i:hover {
   transform: scale(1.1);
 }
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .container {
     flex-direction: column;
 
@@ -211,13 +223,27 @@ body {
     padding: 10px;
     font-size: 8px;
   }
-  .music_card img, .music_card_bg{
-    transform: scale(0.7);
-  }
   .headphone {
+    .music_card img:hover{
+      transform: scale(0.5);
+    }
     transform: scale(0.8);
   }
+  .music_card {
+    i {font-size: 1rem;}
+  }
+  .music_card_bg {
+    display: none;
+  }
+  .music_section .music_card i {
+    font-size: 40px;
+  }
+  .music_section .music_card img:hover {
+    transform: scale(0.8);
+  }
+
 }
+
 .headphone {
   width: 312px;
   transition: 0.3s ease-in-out;
@@ -258,18 +284,15 @@ body {
     height: 1000px;
     width: 100%;
 }
+.music_card img:hover  {
+  transform: scale(1.1);
+}
 .music_card img{
     width: 256px;
     height: 256px;
     position: relative;
     border-radius: 10px;
     transition: 0.3s ease-in-out ;
-  }
-  .music_card img:hover  {
-    transform: scale(0.5);
-  }
-  .music_card_bg {
-    display: none;
   }
   .music_card {
     display: flex;
@@ -279,7 +302,7 @@ body {
     text-align: center;
     i {
       color: white;
-      font-size: 2rem;
+      font-size: 5rem;
       transition: color 0.3s ease-in-out;
     }
   
