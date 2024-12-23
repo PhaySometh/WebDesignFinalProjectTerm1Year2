@@ -198,3 +198,32 @@
     .toggle-password:hover {
         color: rgb(255, 0, 0); /* Optional hover effect */
     }
+    @media (max-width: 500px) {
+        .box {
+            width: 300px;
+        }
+        .bgBox {
+            width: 310px;
+        }
+        .formContainer {
+            width: 200px;
+        }
+        .username input, .password-container, .submitBtn a input {
+            width: 200px;    
+        }
+    }
+    @media (max-width: 321px) {
+        .box {
+            width: 250px;
+            height: 450px;
+        }
+        .bgBox {
+            width: 260px;
+        }
+        .red_element {
+            left: -25px;
+        }
+        .circle {
+            right: -70px;
+        }
+    }
