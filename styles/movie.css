@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mountains+of+Christmas:wght@400;700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap");
+.content-regular {
+    font-family: "Content", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    .content-bold {
+    font-family: "Content", serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    font-family: "Poppins", serif;
+    background-image: url(../assets/musicBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    
+    font-size: 20px;
+    }
+
+    .navbar {
+        margin: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        position: relative;
+        z-index: 10;
+    }
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+    }
+    .navbar .logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .navbar .logo h1{
+        width: 150px;
+        height: 40px;
+        text-align: left;
+        font-size: 30px;
+    }
+    .navbar .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        transition: all 0.3s ease-in-out;
+    }
+    .navbar .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        padding: 5px 10px;
+        transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out,
+        transform 0.3s ease, text-shadow 0.3s ease;
+    }
+    #active {
+        color: rgb(255, 0, 0);
+    }
+    .navbar .nav-links li a:hover {
+        color: rgb(255, 0, 0);
+        font-size: 20px;
+        transform: translateY(-3px) scale(1.1);
+    }
+    .menu-icon {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .menu-icon {
+        display: block;
+        }
+        .navbar {
+        margin: 0;
+        }
+        .navbar .nav_element label i {
+        margin-right: 10px;
+        }
+        .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: rgb(245, 189, 189);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        }
+        .navbar .nav-links.active {
+        display: flex;
+        }
+        .navbar .nav-links li a {
+        padding: 15px 0;
+        color: black;
+        }
+        .navbar .nav-links li a:hover {
+        color: rgb(240, 81, 81);
+        }
+        #active {
+        color: rgb(255, 0, 0);
+        }
+    }
+    @media (max-width: 871px) {
+        .navbar .nav-links li a {
+        font-size: 11px;
+        }
+    }
+
+    .container1 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+
+    }
+    .item_left {
+    width: 60%;
+    height: 50%;
+    }
+
+    .item_right {
+    width: 40%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    }
+
+    .item_right img {
+        width: 80%;
+        height: 400px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-family: 'roboto' BLACK 900;
+        width: 700px;
+        height: 150px;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    h2 {
+        font-family: 'roboto' medium 500;
+        width: 800px;
+        height: 50px;
+        color: white;
+        
+        padding: 0 0 0 100px;
+    }
+    p {
+        font-family: 'roboto';
+        color: white;
+        padding: 0 0 0 200px;
+        text-align: left;
+    }
+    p1 {
+        font-size: 25px;
+        color: white;
+        padding: 0 0 0 150px;
+        
+    }
+    .container2 {
+        margin-top: 20px;
+        display: flex;
+    }
+    .scroll-container {
+        background-color: darkred;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 20px;
+        display: flex;
+    }
+    
+    .scroll-container img {
+        padding: 0 30px 0 0 ;
+
+    }
+    .movie {
+    
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        row-gap: 20px;
+        
+        
+    }
+    .movie img {
+        
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+    
+    }
+
+    .movie a {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        
+    }
+    .link-Netflix {
+    
+        width: 200px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .Netflix {
+        width: 200px;
+        height: 150px;
+        background-image: url(../assets/container.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text {
+    color: red;
+    margin-bottom: 20px;
+    font-weight:500;
+    }
+    .Netflix button {
+        width: 150px;
+        height: 80px;
+        background-color:black;
+        border: 2px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px white;
+        border-radius: 20px;
+    }
+    button a{
+        color: white;
+        font-size: 20px;
+    }
