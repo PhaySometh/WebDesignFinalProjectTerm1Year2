@@ -13,10 +13,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   overflow-x: hidden;
 }
 
+/* Navigation Bar Style */
 .navbar {
   margin: 20px 40px;
   display: flex;
@@ -47,7 +47,7 @@ body {
   font-weight: 500;
   padding: 5px 10px;
   transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out,
-    transform 0.3s ease, text-shadow 0.3s ease;
+  transform 0.3s ease, text-shadow 0.3s ease;
 }
 #active {
   color: rgb(255, 0, 0);
@@ -119,6 +119,7 @@ body {
 #menu-toggle:checked ~ .nav-links {
   display: flex;
 }
+/* end of navigation bar */
 
 .hero {
   font-size: 2rem;
