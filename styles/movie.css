@@ -178,7 +178,7 @@ body {
     display: flex;
 }
 .scroll-container {
-    background-color: darkred;
+    background-color: rgb(86, 0, 0);
     overflow: auto;
     white-space: nowrap;
     padding: 20px;
@@ -254,7 +254,13 @@ button a{
 }
 .movie:hover {
     transform: scale(1.1);
+    a {
+        color: rgb(255, 0, 0);
+    }
 }
 .Netflix:hover {
     transform: scale(1.1);
+}
+.Netflix button a:hover {
+    color: red;
 }
