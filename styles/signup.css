@@ -27,7 +27,6 @@
         position: absolute;
         margin-bottom: 40px;
         z-index: 0;
-        
     }
     .bgBox2 {
         width: 380px;
@@ -147,4 +146,32 @@
     
     .toggle-password:hover {
         color: rgb(0, 0, 0); /* Optional hover effect */
+    }
+
+    @media (max-width: 500px) {
+        .box {
+            width: 350px;
+            box-shadow: 0px 1px 10px rgba(0,  0, 0 )
+        }
+        .formContainer {
+            width: 250px;
+        }
+        .bgBox1, .bgBox2 {
+            display: none;
+        }
+        .submitBtn a input {
+            width: 200px;
+        }
+        .password-container {
+            width: 260px;
+        }
+    }
+    @media (max-width: 321px) {
+        .box {
+            width: 300px;
+            height: 450px;
+        }
+        .white_element {
+            left: -25px;
+        }
     }
