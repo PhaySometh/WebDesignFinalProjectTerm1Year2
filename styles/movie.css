@@ -181,11 +181,11 @@ body {
     background-color: rgb(86, 0, 0);
     overflow: auto;
     white-space: nowrap;
-    padding: 20px;
+    padding: 30px 0 0 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 20px;
+    gap: 50px;
 }
 
 .movie {
@@ -221,7 +221,7 @@ body {
 
 .Netflix {
     width: 250px;
-    height: 200px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
