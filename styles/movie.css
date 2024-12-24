@@ -66,40 +66,48 @@ body {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block;
+    display: block;
     }
     .navbar {
-        margin: 0;
+    margin: 0;
     }
     .navbar .nav_element label i {
-        margin-right: 10px;
+    margin-right: 10px;
     }
     .navbar .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: rgb(245, 189, 189);
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgb(245, 189, 189);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
     }
     .navbar .nav-links.active {
-        display: flex;
+    display: flex;
     }
     .navbar .nav-links li a {
-        padding: 15px 0;
-        color: black;
+    padding: 15px 0;
+    color: black;
     }
     .navbar .nav-links li a:hover {
-        color: rgb(240, 81, 81);
+    color: rgb(240, 81, 81);
+    }
+    #active {
+    color: rgb(255, 0, 0);
+    }
+    .music_card i {
+    font-size: 4rem;
     }
 }
-
 @media (max-width: 871px) {
     .navbar .nav-links li a {
-        font-size: 11px;
+    font-size: 11px;
+    }
+    .music_card i {
+    font-size: 4rem;
     }
 }
 
@@ -111,8 +119,7 @@ body {
 #menu-toggle:checked ~ .nav-links {
     display: flex;
 }
-
-/* End of Navigation Bar */
+/* end of navigation bar */
 
 .container1 {
     width: 100%;
