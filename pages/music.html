@@ -1,185 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../assets/christmas-tree-white.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/christmas-tree-white.png"
+    />
     <title>Music</title>
     <link rel="stylesheet" href="../styles/music.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- navigation bar -->
     <div class="idk">
-        <div class="navbar">
-            <div class="logo">
-                <img src="../assets/christmas-tree-white.png" alt="" />
-                <h1>Jingle505</h1>
-            </div>
-            <div class="nav_element">
-                <input type="checkbox" id="menu-toggle" />
-                <label for="menu-toggle" class="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </label>
-                <ul class="nav-links">
-                    <li><a  class="link" href="../index.html">Home</a></li>
-                    <li><a  class="link" href="artical.html">Artical</a></li>
-                    <li><a  class="link" href="music.html" id="active">Music</a></li>
-                    <li><a  class="link" href="movie.html" >Movie</a></li>
-                    <li><a  class="link" href="festi_treat.html">Festi-treat</a></li>
-                </ul>
-            </div>
+      <div class="navbar">
+        <div class="logo">
+          <img src="../assets/christmas-tree-white.png" alt="" />
+          <h1>Jingle505</h1>
         </div>
+        <div class="nav_element">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul class="nav-links">
+            <li><a class="link" href="../index.html">Home</a></li>
+            <li><a class="link" href="article.html">Article</a></li>
+            <li><a class="link" href="music.html" id="active">Music</a></li>
+            <li><a class="link" href="movie.html">Movie</a></li>
+            <li><a class="link" href="festi_treat.html">Festi-treat</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <!-- navigation bar -->
     <div class="container">
-        <div class="hero">
-            <h1>The</h1>
-            <h1>Real</h1>
-            <h1>Sound</h1>
-        </div>
-        <img class="headphone" src="../assets/headphone.png" alt="">
-        <div class="playbtn">
-            <p>Listen to the master piece</p>
-            <button id="playbtn" onclick="togglePlay()">
-                <i class="fa-solid fa-circle-play"></i>
-            </button>
-        </div>
+      <div class="hero">
+        <h1>The</h1>
+        <h1>Real</h1>
+        <h1>Sound</h1>
+      </div>
+      <img class="headphone" src="../assets/headphone.png" alt="" />
+      <div class="playbtn">
+        <p>Listen to the master piece</p>
+        <button id="playbtn" onclick="togglePlay()">
+          <i class="fa-solid fa-circle-play"></i>
+        </button>
+      </div>
     </div>
     <div class="music_section">
-        <p class="playlist">Playlist</p>
-        <div class="music_card">
-            <div class="music_card_bg"></div>
-            <i class="fa-solid fa-less-than" onclick="prevSong()"></i>
-            <img src="../assets/Santa_Tell_Me_Single.jpg" alt="">
-            <i class="fa-solid fa-greater-than" onclick="nextSong()"></i>
-        </div>
-        <p class="title">Santa Tell Me</p>
-        <div class="description">
-            <i class="fa-solid fa-music"></i>
-            <p>Ariana Grande</p>
-        </div>
-        <button class="song-play-btn" onclick="playCurrentSong()">
-            <i class="fa-solid fa-circle-play"></i> Play Song
-        </button>        
-        <div class="more">
-            <a target="_blank" href="https://open.spotify.com/playlist/37i9dQZF1DX0Yxoavh5qJV?si=LQNB20a5QYWZgOm31657Ng">
-                <h1>Listen More <i class="fa-brands fa-spotify"></i></h1>
-            </a>
-        </div>
+      <p class="playlist">Playlist</p>
+      <div class="music_card">
+        <div class="music_card_bg"></div>
+        <i class="fa-solid fa-less-than" onclick="prevSong()"></i>
+        <img src="../assets/Santa_Tell_Me_Single.jpg" alt="" />
+        <i class="fa-solid fa-greater-than" onclick="nextSong()"></i>
+      </div>
+      <p class="title">Santa Tell Me</p>
+      <div class="description">
+        <i class="fa-solid fa-music"></i>
+        <p>Ariana Grande</p>
+      </div>
+      <button class="song-play-btn" onclick="playCurrentSong()">
+        <i class="fa-solid fa-circle-play"></i> Play Song
+      </button>
+      <div class="more">
+        <a
+          target="_blank"
+          href="https://open.spotify.com/playlist/37i9dQZF1DX0Yxoavh5qJV?si=LQNB20a5QYWZgOm31657Ng"
+        >
+          <h1>Listen More <i class="fa-brands fa-spotify"></i></h1>
+        </a>
+      </div>
     </div>
     <script>
-        const themeAudio = new Audio("../assets/JingleBells.mp3"); // Theme song
-        let songAudio = new Audio(); // Audio element for songs
-        const playBtn = document.getElementById("playbtn");
-        const songs = [
-            {
-                title: "Santa Tell Me",
-                artist: "Ariana Grande",
-                image: "../assets/Santa_Tell_Me_Single.jpg",
-                audio: "../assets/SantaTellMeAudio.mp3"
-            },
-            {
-                title: "Last Christmas",
-                artist: "Wham!",
-                image: "../assets/lastchristmas.jpg",
-                audio: "../assets/LastChristmasAudio.mp3"
-            },
-            {
-                title: "All I Want for Christmas Is You",
-                artist: "Mariah Carey",
-                image: "../assets/All_I_Want_for_Christmas_Is_You.jpg",
-                audio: "../assets/AllIWantforChristmasIsYouAudio.mp3"
-            },
-            {
-                title: "SnowMan",
-                artist: "Sia",
-                image: "../assets/snowman.jpg",
-                audio: "../assets/SnowmanAudio.mp3"
-            }
-        ];
+      const themeAudio = new Audio("../assets/JingleBells.mp3"); // Theme song
+      let songAudio = new Audio(); // Audio element for songs
+      const playBtn = document.getElementById("playbtn");
+      const songs = [
+        {
+          title: "Santa Tell Me",
+          artist: "Ariana Grande",
+          image: "../assets/Santa_Tell_Me_Single.jpg",
+          audio: "../assets/SantaTellMeAudio.mp3",
+        },
+        {
+          title: "Last Christmas",
+          artist: "Wham!",
+          image: "../assets/lastchristmas.jpg",
+          audio: "../assets/LastChristmasAudio.mp3",
+        },
+        {
+          title: "All I Want for Christmas Is You",
+          artist: "Mariah Carey",
+          image: "../assets/All_I_Want_for_Christmas_Is_You.jpg",
+          audio: "../assets/AllIWantforChristmasIsYouAudio.mp3",
+        },
+        {
+          title: "SnowMan",
+          artist: "Sia",
+          image: "../assets/snowman.jpg",
+          audio: "../assets/SnowmanAudio.mp3",
+        },
+      ];
 
-        let currentSongIndex = 0;
-        let isPlaying = false; // Track the play/pause state
+      let currentSongIndex = 0;
+      let isPlaying = false; // Track the play/pause state
 
-        // Initialize the theme song (looping)
-        themeAudio.loop = true;
-        themeAudio.play();
+      // Initialize the theme song (looping)
+      themeAudio.loop = true;
+      themeAudio.play();
 
-        // Start playing theme song by default
-        playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>'; // Set the icon to pause
+      // Start playing theme song by default
+      playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>'; // Set the icon to pause
 
-        // Function to toggle the theme song (Play/Pause)
-        function togglePlay() {
-            if (themeAudio.paused && !isPlaying) {
-                themeAudio.play();
-                playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
-            } else {
-                themeAudio.pause();
-                playBtn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
-            }
+      // Function to toggle the theme song (Play/Pause)
+      function togglePlay() {
+        if (themeAudio.paused && !isPlaying) {
+          themeAudio.play();
+          playBtn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
+        } else {
+          themeAudio.pause();
+          playBtn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
         }
+      }
 
-        // Play the current song
-        function playCurrentSong() {
-            if (!isPlaying) {
-                // Stop the theme song if it's playing
-                themeAudio.pause();
+      // Play the current song
+      function playCurrentSong() {
+        if (!isPlaying) {
+          // Stop the theme song if it's playing
+          themeAudio.pause();
 
-                const song = songs[currentSongIndex];
-                songAudio.src = song.audio; // Update the audio source for the current song
-                songAudio.play();
-                songAudio.loop = true; // Loop the song
-                isPlaying = true;
-                updatePlayButton(); // Update the button state to pause
-            } else {
-                stopCurrentSong(); // Stop the current song if it's already playing
-            }
+          const song = songs[currentSongIndex];
+          songAudio.src = song.audio; // Update the audio source for the current song
+          songAudio.play();
+          songAudio.loop = true; // Loop the song
+          isPlaying = true;
+          updatePlayButton(); // Update the button state to pause
+        } else {
+          stopCurrentSong(); // Stop the current song if it's already playing
         }
+      }
 
-        // Stop the current song
-        function stopCurrentSong() {
-            songAudio.pause();
-            songAudio.currentTime = 0; // Reset the song to the beginning
-            isPlaying = false;
-            updatePlayButton(); // Update button to play
-        }
+      // Stop the current song
+      function stopCurrentSong() {
+        songAudio.pause();
+        songAudio.currentTime = 0; // Reset the song to the beginning
+        isPlaying = false;
+        updatePlayButton(); // Update button to play
+      }
 
-        // Function to update the play button
-        function updatePlayButton() {
-            const playButton = document.querySelector(".song-play-btn i");
-            if (isPlaying) {
-                playButton.classList.remove("fa-circle-play");
-                playButton.classList.add("fa-circle-pause");
-            } else {
-                playButton.classList.remove("fa-circle-pause");
-                playButton.classList.add("fa-circle-play");
-            }
+      // Function to update the play button
+      function updatePlayButton() {
+        const playButton = document.querySelector(".song-play-btn i");
+        if (isPlaying) {
+          playButton.classList.remove("fa-circle-play");
+          playButton.classList.add("fa-circle-pause");
+        } else {
+          playButton.classList.remove("fa-circle-pause");
+          playButton.classList.add("fa-circle-play");
         }
+      }
 
-        // Update the song details (image, title, artist)
-        function updateSong() {
-            const song = songs[currentSongIndex];
-            document.querySelector('.music_card img').src = song.image;
-            document.querySelector('.title').textContent = song.title;
-            document.querySelector('.description p').textContent = song.artist;
-            songAudio.src = song.audio; // Update the audio source for the current song
-            songAudio.load(); // Ensure the audio is loaded
-            isPlaying = false; // Reset the play state
-            updatePlayButton(); // Update the button state
-        }
+      // Update the song details (image, title, artist)
+      function updateSong() {
+        const song = songs[currentSongIndex];
+        document.querySelector(".music_card img").src = song.image;
+        document.querySelector(".title").textContent = song.title;
+        document.querySelector(".description p").textContent = song.artist;
+        songAudio.src = song.audio; // Update the audio source for the current song
+        songAudio.load(); // Ensure the audio is loaded
+        isPlaying = false; // Reset the play state
+        updatePlayButton(); // Update the button state
+      }
 
-        // Next song
-        function nextSong() {
-            stopCurrentSong(); // Stop the current song before moving to the next
-            currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop back to the first song
-            updateSong();
-        }
+      // Next song
+      function nextSong() {
+        stopCurrentSong(); // Stop the current song before moving to the next
+        currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop back to the first song
+        updateSong();
+      }
 
-        // Previous song
-        function prevSong() {
-            stopCurrentSong(); // Stop the current song before moving to the previous
-            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length; // Loop back to the last song
-            updateSong();
-        }
-    </script>  
-</body>
+      // Previous song
+      function prevSong() {
+        stopCurrentSong(); // Stop the current song before moving to the previous
+        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length; // Loop back to the last song
+        updateSong();
+      }
+    </script>
+  </body>
 </html>
