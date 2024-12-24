@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mountains+of+Christmas:wght@400;700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", serif;
+  background-image: url(../assets/musicBackground.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar Style */
+.navbar {
+  margin: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out,
+  transform 0.3s ease, text-shadow 0.3s ease;
+}
+#active {
+  color: rgb(255, 0, 0);
+}
+.navbar .nav-links li a:hover {
+  color: rgb(255, 0, 0);
+  font-size: 20px;
+  transform: translateY(-3px) scale(1.1);
+}
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .navbar {
+    margin: 0;
+  }
+  .navbar .nav_element label i {
+    margin-right: 10px;
+  }
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgb(245, 189, 189);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .navbar .nav-links.active {
+    display: flex;
+  }
+  .navbar .nav-links li a {
+    padding: 15px 0;
+    color: black;
+  }
+  .navbar .nav-links li a:hover {
+    color: rgb(240, 81, 81);
+  }
+  #active {
+    color: rgb(255, 0, 0);
+  }
+  .music_card i {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 871px) {
+  .navbar .nav-links li a {
+    font-size: 11px;
+  }
+  .music_card i {
+    font-size: 4rem;
+  }
+  .background .merry {
+    font-size: 6rem;
+  }
+  .background .merry1 {
+    font-size: 1rem;
+  }
+}
+
+/* Checkbox to toggle menu */
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .nav-links {
+  display: flex;
+}
+/* end of navigation bar */
+
+
+/* article--------------jinhong----------------------------------*/
+.articles {
+  padding: 5%;
+}
+.section-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.frequently-read {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 50px;
+}
+.frequently-read .section-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  animation: glow 0.1s ease-in-out infinite alternate;
+}
+
+/* @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #2c0fd3, 0 0 20px #1ad410, 0 0 30px #3f15d8, 0 0 40px #5e105e, 0 0 50px #e60073, 0 0 60px #051198, 0 0 70px #e7cf16;
+  }
+  to {
+    text-shadow: 0 0 20px #1577b4, 0 0 30px #c40f1b, 0 0 40px #870f19, 0 0 50px #9c1558, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} */
+
+.frequently-read .articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+}
+.frequently-read .articles div {
+  background-color: #ba122e;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.frequently-read img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* body article*/
+.body-article {
+  background-color: rgb(171, 9, 9);
+  background-image: url(../assets/musicBackground.jpg);
+}
+.background {
+  background-image: url(../assets/red.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: white;
+  padding: 20px;
+  margin: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0);
+}
+.merry {
+  font-family: "Mountains of Christmas", serif;
+  font-size: 10rem;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+.merry1 {
+  font-size: 30px;
+}
+.end {
+  background-color: rgb(187, 9, 9);
+  text-align: center;
+  font-size: 30px;
+  padding: 50px;
+  line-height: 30px;
+  margin: 50px;
+}
+.footerf{
+  background-color: #ba122e;
+  margin: 10px;
+  padding: 50px;
+  color: white;
+  border-radius: 20px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .frequently-read {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .background .merry {
+    font-size: 4.7rem;
+  }
+  .background .merry1 {
+    margin-top: 25px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 321px) {
+  .background .merry {
+    font-size: 3rem;
+  }
+  .background .merry1 {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.articles div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.articles div img {
+  width: 250px;
+  height: 300px; 
+  border-radius: 10px; 
+  margin-bottom: 10px;
+}
+
+#under, .articles div{
+  width: 280px;
+  height: 450px; 
+  border-radius: 10px; 
+  margin-bottom: 10px;
+}
+.articles a {
+  text-decoration: none;
+  transition: 0.3s ease-in-out; 
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  #under {
+    color: aqua;
+    font-weight: 700;
+    transition: 0.3s ease-in-out; 
+  }
+}
+a #under p {
+  margin: 5px 0; 
+  font-size: 16px; 
+  color: #ffffff;
+}
+
+.articles a:hover {
+  transform: scale(1.1);
+  #under:hover {
+    font-size: 1.5rem;
+    color: #ff00d9;
+    text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.frequently-read .articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts the number of columns based on available space */
+  gap: 15px; /* Space between items */
+  padding: 5%; /* Optional padding */
+}
+
+.articles div {
+  background-color: #ba122e; /* Background color for each article card */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Space out content evenly */
+}
+
+.articles div img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .frequently-read .articles {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Fewer columns on smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .frequently-read .articles {
+    grid-template-columns: 1fr; /* Stack items one by one on very small screens */
+  }
+}
